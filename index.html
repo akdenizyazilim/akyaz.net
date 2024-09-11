@@ -42,12 +42,21 @@
             color: #0056b3;
         }
     </style>
+    <script type="text/javascript">
+        function createEmailLink() {
+            var part1 = "derkan";
+            var part2 = "gmail.com";
+            var email = part1 + "@" + part2;
+            document.getElementById("email").innerHTML = '<a href="mailto:' + email + '" class="contact-email">' + email + '</a>';
+        }
+        window.onload = createEmailLink;
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>This Domain is For Sale</h1>
         <p>If you're interested in acquiring <strong>akyaz.net</strong>, please send your offers to:</p>
-        <p><a href="mailto:derkan@gmail.com" class="contact-email">derkan@gmail.com</a></p>
+        <p id="email"></p>
     </div>
 </body>
 </html>
